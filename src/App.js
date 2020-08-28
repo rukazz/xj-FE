@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{ useState, useEffect} from 'react';
 import './App.css';
+import AxiosCancel from './components/AxiosCancel.js'
+import FetchCancel from "./components/FetchCancel.js";
 
 function App() {
+  const [mounted, setMounted] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setMounted(false);
+    }, 10000);
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {mounted && (
+        <>
+          <AxiosCancel url="https://reqres.in/api/users/2?delay=2" />
+          <hr />
+          {/* <FetchCancel url="https://reqres.in/api/users/3?delay=2" /> */}
+          <hr />
+        </>
+      )}
     </div>
   );
 }
