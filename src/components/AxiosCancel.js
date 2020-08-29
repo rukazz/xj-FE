@@ -6,14 +6,13 @@ export default function AxiosCancel({ url }) {
 
   useEffect(() => {
     let source = Axios.CancelToken.source();
-console.log("Render")
     const loadData = async () => {
       try {
         const response = await Axios.get(url, {
           cancelToken: source.token
         });
-        console.log("AxiosCancel: got response", response.data);
-        setData(response.data);
+        console.log("AxiosCancel: got response");
+        setData(response.data)
       } catch (error) {
         if (Axios.isCancel(error)) {
           console.log("AxiosCancel: caught cancel");
