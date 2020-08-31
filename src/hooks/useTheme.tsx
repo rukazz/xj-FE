@@ -2,12 +2,12 @@ import React, { useReducer } from 'react';
 
 interface IThemeContext {
   color: string;
-  dispatch: any;
+  dispatch: React.Dispatch<any>;
 }
 
 const defaultContextValue: IThemeContext = {
   color: 'blue',
-  dispatch: '',
+  dispatch: () => null,
 };
 
 export const ThemeContext = React.createContext<IThemeContext>(defaultContextValue);
