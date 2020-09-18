@@ -21,9 +21,7 @@ function App() {
       <ThemeProvider>
         <BaseLayout />
       </ThemeProvider>
-      {/* {mounted && ( */}
-      {/* <> * /}
-      {/* <AxiosCancel url="https://reqres.in/api/users/2?delay=2" /> */}
+      {mounted && <>{/* <AxiosCancel url="https://reqres.in/api/users/2?delay=2" /> */}</>}
       {/* <p>{test}</p>
                 <hr /> */}
       {/* <FetchCancel url="https://reqres.in/api/users/3?delay=2" /> */}

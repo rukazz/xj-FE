@@ -21,7 +21,7 @@ state 会苏随着 Reducer 传的 state 做改变，
 dispatch 是用來和 Reducer 沟通的 Function 。
 _/
 
-```
+```javascript
 // combine reducer
 const reduceReducers = (...reducers) => (state, action) =>
   reducers.reduce((acc, nextReducer) => nextReducer(acc, action), state);
