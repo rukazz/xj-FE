@@ -2,6 +2,7 @@ import React, { useContext, useState, useRef, useEffect } from 'react';
 import cls from 'classnames';
 import './index.scss';
 import { ThemeContext } from '../../hooks/useTheme';
+import { Form } from '../TestMemo';
 
 interface IProps {}
 const PREFIX = 'BaseLayout';
@@ -25,10 +26,11 @@ export const BaseLayout: React.FC<IProps> = React.memo(function BaseLayout({}) {
     <div className={cls(PREFIX)} style={{ background: color }}>
       before: {prevCount}
       after: {count}
-      <button onClick={() => dispatch('red')}>SET BLUE BACKGROUND</button>
+      {/* <button onClick={() => dispatch('red')}>SET BLUE BACKGROUND</button>
       <button onClick={() => dispatch('yellow')}>SET YELLOW BACKGROUND</button>
       <button onClick={() => setCount((v) => v + 1)}>set Count +1</button>
-      <button onClick={() => setCount((v) => v - 1)}>set count -1</button>
+      <button onClick={() => setCount((v) => v - 1)}>set count -1</button> */}
+      <Form />
     </div>
   );
 });

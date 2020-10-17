@@ -1,0 +1,73 @@
+@import "../../styles/styles.scss";
+
+.CDRomStatusModal {
+  &.white {
+    background: $White;
+  }
+
+  &.black {
+    background: $Black;
+  }
+
+  & .ant-modal-content .ant-modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    height: 60px;
+    padding: 0;
+
+    & .ant-modal-title {
+      @include font-style("regular", 20px, rgba(0, 0, 0, 0.85));
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 620px;
+    @include font-style("regular", 20px, #000);
+  }
+
+  & &-Prompt {
+    @include font-style("regular", 32px, rgba(0, 0, 0, 0.85));
+    margin-top: 40px;
+    margin-left: 260px;
+    align-self: start;
+  }
+
+  & &-Button {
+    width: 160px;
+    height: 56px;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+  }
+
+  & &-Info-Button {
+    width: 160px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  & &-Message {
+    @include font-style("medium", 48px, rgba(0, 0, 0, 0.85));
+    line-height: 48px;
+    margin-top: 20px;
+  }
+
+  & &-Message-Sub {
+    @include font-style("medium", 20px, rgba(0, 0, 0, 0.5));
+    line-height: 20px;
+    margin-top: 24px;
+  }
+
+  & &-FailureImg {
+    object-fit: contain;
+    margin-top: 78px;
+    margin-bottom: 24px;
+  }
+}

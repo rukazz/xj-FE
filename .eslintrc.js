@@ -1,5 +1,5 @@
 module.exports = {
-  // ignorePatterns: ["node_modules/", "src/components/"],
+  ignorePatterns: ['node_modules/', 'src/components/', 'src/'],
   parser: '@typescript-eslint/parser', //定义ESLint的解析器
   extends: [
     'react-app',
@@ -29,32 +29,34 @@ module.exports = {
     },
   },
   rules: {
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/interface-name-prefix': 0,
-    '@typescript-eslint/no-var-requires': 1,
-    '@typescript-eslint/triple-slash-reference': 1,
-    '@typescript-eslint/ban-ts-ignore': 1,
-    'no-unused-vars': 2,
-    '@typescript-eslint/no-unused-vars': 2,
-    'react/display-name': 0,
-    'no-prototype-builtins': 1,
-    'no-irregular-whitespace': 1,
-    'react/prop-types': 0,
-    'i18n/i18n-message-id': 1,
-    'sort-imports-es6-autofix/sort-imports-es6': [
-      1,
-      {
-        ignoreCase: false,
-        // ignoreDeclarationSort: false,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['all', 'multiple', 'single', 'none'],
-      },
-    ],
+    // '@typescript-eslint/explicit-function-return-type': 0,
+    // '@typescript-eslint/interface-name-prefix': 0,
+    // '@typescript-eslint/no-var-requires': 1,
+    // '@typescript-eslint/triple-slash-reference': 1,
+    // '@typescript-eslint/ban-ts-ignore': 1,
+    // 'no-unused-vars': 2,
+    // '@typescript-eslint/no-unused-vars': 2,
+    // 'react/display-name': 0,
+    // 'no-prototype-builtins': 1,
+    // 'no-irregular-whitespace': 1,
+    // 'react/prop-types': 0,
+    // 'i18n/i18n-message-id': 1,
+    // 'sort-imports-es6-autofix/sort-imports-es6': [
+    //   1,
+    //   {
+    //     ignoreCase: false,
+    //     // ignoreDeclarationSort: false,
+    //     ignoreMemberSort: false,
+    //     memberSyntaxSortOrder: ['all', 'multiple', 'single', 'none'],
+    //   },
+    // ],
   },
-  overrides: [{
-    files: ['config/**/*.js', 'scripts/**/*.js', 'rules/**/*.js'],
-    rules: {
-      '@typescript-eslint/no-var-requires': 'off',
+  overrides: [
+    {
+      files: ['config/**/*.js', 'scripts/**/*.js', 'rules/**/*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
     },
-  }, ],
+  ],
 };

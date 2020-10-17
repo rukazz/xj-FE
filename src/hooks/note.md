@@ -36,7 +36,7 @@ const [s2, d2] = useReducer(b, {}); // some init state {}
 
 //  memoize
 const combinedDispatch = React.useCallback(combineDispatch(d1, d2), [d1, d2]);
-const combinedState = React.useMemo(() => ({ s1, s2, }), [s1, s2]);
+const combinedState = React.useMemo(() => ({ s1, s2 }), [s1, s2]);
 
 <DispatchContext.Provider value={combinedDispatch}>
   <StateContext.Provider value={combinedState}> {children} </StateContext.Provider>
@@ -82,3 +82,7 @@ export const ThemeProvider: React.FC = ({ children }) => {
 
 
 ```
+
+// useCallback(a, [])
+缓存了内联函数 a 的实例， 一般的函数 a 每次渲染创建一次，原来的函数会被垃圾回收（释放内存空间），返回新的 a 函数；
+useCallback 的 a 随着渲染的次数增加，只是创建了一次。

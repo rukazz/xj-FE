@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+// "typescript": "3.9.7"
+// "@typescript-eslint/parser": "^3.10.1"
 In the project directory, you can run:
 
 ### `yarn start`
